@@ -1,10 +1,15 @@
 This home-based application for the assessment of upper-limb impairment uses the Azure Kinect motion capture system.
 
 The attached Unity project contains five scenes:
+
 -Flex, for the analysis of shoulder and elbow flexibility
+
 -Flow, for the analysis of arm stability
+
 -Conformance, for the analysis of arm motion conformity and precision
+
 -Flash, for the analysis of arm dynamics and reactivity
+
 -Graph, for the depiction of user results day on day.
 
 Mixed reality and augmented reality technologies, along with gamification strategies were implemented to create an immersive and engaging environment.

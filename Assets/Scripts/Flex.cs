@@ -33,8 +33,19 @@ public class Flex : MonoBehaviour
     float e1;
     float e2;
 
+    bool complete = false;
+
     private IEnumerator Start()
     {
+        txt.text = "Say 'left' or 'right' to choose your dominant hand";
+        VoiceManager.AddWord("left", () => { complete = true; HandManager.currentInd = 0; });
+        VoiceManager.AddWord("right", () => { complete = true; HandManager.currentInd = 1; });
+        while (!complete)
+        {
+            yield return null;
+        }
+        VoiceManager.RemoveWord("left");
+        VoiceManager.RemoveWord("right");
         movements = new MovementData[2];
         if(HandManager.currentInd == 1) 
         {
